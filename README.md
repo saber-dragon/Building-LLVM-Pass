@@ -17,7 +17,7 @@ If you do not install `brew`, please refer to [Homebrew](https://brew.sh/) if yo
 ```bash
 export HOMEBREW=/home/linuxbrew/.linuxbrew/
 mkdir build && cd build
-cmake .. -DCMAKE_C_COMPILER="$HOMEBREW/bin/clang" -DCMAKE_CXX_COMPILER="$HOMEBREW/bin/clang++" -DCMAKE_CXX_FLAGS="`$HOMEBREW/bin/llvm-config --cxxflags`"
+$HOMEBREW/bin/cmake .. -DCMAKE_C_COMPILER="$HOMEBREW/bin/clang" -DCMAKE_CXX_COMPILER="$HOMEBREW/bin/clang++" -DCMAKE_CXX_FLAGS="`$HOMEBREW/bin/llvm-config --cxxflags`"
 make
 ```
 
