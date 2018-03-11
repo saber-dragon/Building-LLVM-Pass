@@ -21,9 +21,7 @@ cmake .. -DCMAKE_C_COMPILER="$HOMEBREW/bin/clang" -DCMAKE_CXX_COMPILER="$HOMEBRE
 make
 ```
 
-Note that 1) If clang/clang++ is your default C/C++ compiler, you do not need to add `-DCMAKE_C_COMPILER="$HOMEBREW/bin/clang" -DCMAKE_CXX_COMPILER="$HOMEBREW/bin/clang++"`; 2) 
-`-DCMAKE_CXX_FLAGS="\`$HOMEBREW/bin/llvm-config --cxxflags\`"` is optional; 3) If you install 
-LLVM via other approaches, you just need to change [CMakeLists.txt](CMakeLists.txt#L12) to the path that  contains those LLVM headers on which your pass is dependent on; 3) Make sure your cmake version is at least 3.9.
+Note that 1) If clang/clang++ is your default C/C++ compiler, you do not need to add `-DCMAKE_C_COMPILER="$HOMEBREW/bin/clang" -DCMAKE_CXX_COMPILER="$HOMEBREW/bin/clang++"`; 3) Make sure your cmake version is at least 3.9.
 
 
 If everything goes well, you should see similar outputs as shown belows.
@@ -74,3 +72,8 @@ Hello: main
 Printing analysis 'Hello World Pass' for function 'main':
 Pass::print not implemented for pass: 'Hello World Pass'!
 ```
+
+
+## Acknowledgments
+
+The [`CMakeLists.txt`](CMakeLists.txt) in this repo is tuned from the [Makefile](https://github.com/goyalankit/compilers-and-llvm/blob/master/spring2014-compilers/assignment2/FunctionInfo/Makefile).
