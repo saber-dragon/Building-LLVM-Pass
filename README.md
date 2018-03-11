@@ -29,7 +29,7 @@ LLVM via other approaches, you just need to change [CMakeLists.txt](CMakeLists.t
 If everything goes well, you should see similar outputs as shown belows.
 
 > After `cmake`:
-```bash
+```text
 BREW/bin/clang++" -DCMAKE_CXX_FLAGS="`$HOMEBREW/bin/llvm-config --cxxflags`"
 -- The C compiler identification is Clang 5.0.1
 -- The CXX compiler identification is Clang 5.0.1
@@ -51,7 +51,7 @@ BREW/bin/clang++" -DCMAKE_CXX_FLAGS="`$HOMEBREW/bin/llvm-config --cxxflags`"
 ```
 
 > After `make`
-```bash
+```text
 Scanning dependencies of target llvm-pass
 [ 50%] Building CXX object CMakeFiles/llvm-pass.dir/helloPass.cpp.o
 warning: unknown warning option '-Wno-maybe-uninitialized'; did you mean '-Wno-uninitialized'?
@@ -69,7 +69,7 @@ $HOMEBREW/bin/opt -load ./libllvm-pass.so -hello -analyze demo.bc
 
 The sample output is as follows.
 
-```bash
+```text
 Hello: main
 Printing analysis 'Hello World Pass' for function 'main':
 Pass::print not implemented for pass: 'Hello World Pass'!
